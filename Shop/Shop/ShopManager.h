@@ -4,7 +4,7 @@ class ShopManager
 	ShopManager();
 public:
 	~ShopManager();
-	static ShopManager*SM();
+	static ShopManager*GetSM();
 
 
 };

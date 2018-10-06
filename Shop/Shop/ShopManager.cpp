@@ -11,7 +11,7 @@ ShopManager::~ShopManager()
 {
 }
 
-ShopManager* ShopManager::SM()
+ShopManager* ShopManager::GetSM()
 {
 	static ShopManager*Sm = new ShopManager();
 	return Sm;

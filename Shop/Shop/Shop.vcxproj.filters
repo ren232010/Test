@@ -30,6 +30,15 @@
     <ClInclude Include="ShopManager.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Shops.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="prop.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Role.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -42,6 +51,15 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="ShopManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Shops.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="prop.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Role.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
