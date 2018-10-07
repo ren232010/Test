@@ -3,7 +3,7 @@
 #include "Item.h"
 #include <iostream>
 #include <string>
-
+#include "Item.h"
 
 Shop1::Shop1()
 {
@@ -19,7 +19,6 @@ void Shop1::ShowShop()
 {
 	for (int i=0;i<Size;i++)
 	{
-		std::cout << i << "--" << Items[i]->GetName() << "   价格：" << Items[i]->GetPrice() << std::endl;
+		std::cout << i << "--" << Items[i]->GetName()<< Items[i]->JudgeInfo(Items[i]->GetInfo()) << "   价格：" << Items[i]->GetPrice() << std::endl;
 	}
-
 }
