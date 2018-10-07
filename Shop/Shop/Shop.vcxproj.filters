@@ -30,6 +30,18 @@
     <ClInclude Include="ShopManager.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Shop1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Gamer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GameMode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -42,6 +54,18 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="ShopManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Shop1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Gamer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GameMode.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -16,3 +16,5 @@ ShopManager* ShopManager::SM()
 	static ShopManager*Sm = new ShopManager();
 	return Sm;
 }
+
+
