@@ -7,6 +7,7 @@ public:
 	Shop1();
 	~Shop1();
 	void ShowShop();
+	void Shopping();
 public:
 	std::string Name;
 	class Item**Items;

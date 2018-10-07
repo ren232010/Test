@@ -1,15 +1,28 @@
 #pragma once
+
+enum EShopState
+{
+	ES_ShopList,
+	ES_Shopping
+};
+
 class ShopManager
 {
-	ShopManager();
 protected:
+	ShopManager();
 	class Shop1**Shops;
 	int Size;
+	int CurrentSta;
+	EShopState State;
+
+
+
 public:
 	~ShopManager();
 
-	static ShopManager*SM();
+	static ShopManager*GetSM();
 	void Install();
-
+	void Logic();
+	void ShopList();
 };
 

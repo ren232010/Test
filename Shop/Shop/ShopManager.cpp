@@ -2,6 +2,7 @@
 #include "ShopManager.h"
 #include "Shop1.h"
 #include "Item.h"
+#include <string>
 
 
 
@@ -14,7 +15,7 @@ ShopManager::~ShopManager()
 {
 }
 
-ShopManager* ShopManager::SM()
+ShopManager* ShopManager::GetSM()
 {
 	static ShopManager*Sm = new ShopManager();
 	return Sm;
@@ -57,7 +58,7 @@ void ShopManager::Install()
 	{
 		Shop1*shop = new Shop1();
 		shop->Name = "而坑药店";
-		shop->Size = ;
+		shop->Size = 4;
 		shop->Items = new  Item*[shop->Size];
 
 		shop->Items[0] = new  Item("小红", EI_HP,10 , 10);
@@ -67,5 +68,44 @@ void ShopManager::Install()
 		
 		Shops[0] = shop;
 	}
+}
+
+void ShopManager::Logic()
+{
+	switch (State)
+	{
+	case ES_ShopList:
+		ShopList();
+		break;
+	case ES_Shopping:
+		Shops[CurrentSta]->ShowShop();
+		break;
+	default:
+		break;
+	}
+}
+
+void ShopManager::ShopList()
+{
+	using namespace std;
+	cout << "当前营业商店：" << endl;
+	for (int i=0;i<Size;i++)
+	{
+		cout << i << "--" << Shops[i]->Name << endl;
+	}
+	int Cmd = 0;
+	cout << "输入你想进入的商店：" << endl;
+	cin >> Cmd;
+	if (Cmd>=Size||Cmd<0)
+	{
+		cout << "输入错误" << endl;
+		getchar();
+	}
+	else
+	{
+		State = ES_Shopping;
+		CurrentSta = Cmd;
+	}
+	
 }
 

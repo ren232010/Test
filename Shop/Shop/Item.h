@@ -23,6 +23,7 @@ public:
 	
 	std::string GetName();
 	std::string JudgeInfo(EInfo Current);
+	int GetInfoNum();
 	int GetPrice();
 	EInfo GetInfo();
 };

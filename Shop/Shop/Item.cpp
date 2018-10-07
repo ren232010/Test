@@ -36,6 +36,11 @@ std::string Item::JudgeInfo(EInfo Current)
 	}
 }
 
+int Item::GetInfoNum()
+{
+	return InfoNum;
+}
+
 int Item::GetPrice()
 {
 	return Price;
