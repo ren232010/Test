@@ -1,4 +1,3 @@
-﻿  Shop1.cpp
-d:\aaa\shop\shop\shop1.cpp(42): error C2059: 语法错误:“}”
-  GameMode.cpp
-  正在生成代码...
+﻿  GameMode.cpp
+  Shop.vcxproj -> D:\AAA\Shop\Debug\Shop.exe
+  Shop.vcxproj -> D:\AAA\Shop\Debug\Shop.pdb (Full PDB)

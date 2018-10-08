@@ -2,7 +2,7 @@
 #include "Item.h"
 #include <iostream>
 
-Item::Item(std::string name, EInfo state,int Num, int price) :Name(name) , State(state),InfoNum(Num),Price(price)
+Item::Item(std::string name, EInfo state,int Num, int price,int id) :Name(name) , State(state),InfoNum(Num),Price(price),Id(id)
 {
 
 }
@@ -22,16 +22,25 @@ std::string Item::JudgeInfo(EInfo Current)
 	switch (Current)
 	{
 	case EI_ATK:
-		return "ATK：";
+		return "攻击力增加：";
 		break;
-	case EI_Def:
-		return "Def：";
+	case EI_Head:
+		return "Hp增加：";
 		break;
-	case EI_HP:
+	case EI_Shoulder:
 		return "HP增加：";
 		break;
+	case EI_Body:
+		return "防御增加：";
+		break;
+	case EI_Leg:
+		return "防御增加：";
+		break;
+	case EI_HP:
+		return "HP恢复：";
+		break;
 	default:
-		return "All Info：";
+		return "错误物品。";
 		break;
 	}
 }
@@ -49,4 +58,9 @@ int Item::GetPrice()
 EInfo Item::GetInfo()
 {
 	return State;
+}
+
+int Item::GetId()
+{
+	return Id;
 }

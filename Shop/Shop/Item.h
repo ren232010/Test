@@ -4,7 +4,10 @@
 enum EInfo
 {
 	EI_ATK,
-	EI_Def,
+	EI_Head,
+	EI_Shoulder,
+	EI_Body,
+	EI_Leg,
 	EI_HP
 };
 
@@ -12,13 +15,14 @@ enum EInfo
 class Item
 {
 public:
-	Item(std::string , EInfo ,int, int );
+	Item(std::string , EInfo ,int, int, int );
 	~Item();
 protected:
 	std::string Name;
 	int Price;
 	EInfo State;
 	int InfoNum;
+	int Id;
 public:
 	
 	std::string GetName();
@@ -26,5 +30,6 @@ public:
 	int GetInfoNum();
 	int GetPrice();
 	EInfo GetInfo();
+	int GetId();
 };
 

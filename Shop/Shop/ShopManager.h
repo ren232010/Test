@@ -9,7 +9,6 @@ enum EShopState
 class ShopManager
 {
 protected:
-	ShopManager();
 	class Shop1**Shops;
 	int Size;
 	int CurrentSta;
@@ -18,9 +17,10 @@ protected:
 
 
 public:
+	ShopManager();
 	~ShopManager();
 
-	static ShopManager*GetSM();
+	void ChangeState(EShopState);
 	void Install();
 	void Logic();
 	void ShopList();

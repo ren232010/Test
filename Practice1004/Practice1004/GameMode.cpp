@@ -104,7 +104,7 @@ void GameMode::RoleLogic()
 		}
 	}
 
-	getchar();
+	//getchar();
 
 
 }
