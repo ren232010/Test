@@ -82,10 +82,10 @@ void DrawBox()
 			if (j==0||j==9||i==0||i==7)
 			{
 				cout << "*";
-			} 
+			}
 			else
 			{
-				
+
 				cout << " ";
 			}
 		}
