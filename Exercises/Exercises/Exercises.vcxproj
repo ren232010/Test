@@ -148,6 +148,7 @@
     <ClInclude Include="Break.h" />
     <ClInclude Include="Continue.h" />
     <ClInclude Include="Enum.h" />
+    <ClInclude Include="For.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
@@ -156,6 +157,7 @@
     <ClCompile Include="Continue.cpp" />
     <ClCompile Include="Enum.cpp" />
     <ClCompile Include="Exercises.cpp" />
+    <ClCompile Include="For.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

@@ -15,10 +15,15 @@ void ChangeState()
 {
 	using namespace std;
 	int Cmd=0;
+	cout << "选择你要呈现的状态" << endl;
+	cout << "0--隐身" << endl;
+	cout << "1--在线" << endl;
+	cout << "2--下线" << endl;
+	cout << "3--离开" << endl;
+	cout << "4--忙碌" << endl;
 
-		EQQState Current = (EQQState)Cmd;
 		cin >> Cmd;
-
+		EQQState Current = (EQQState)Cmd;
 		switch (Current)
 		{
 		case EQQS_Qme:
@@ -45,10 +50,6 @@ void ChangeState()
 			cout << "5" << endl;
 			cout << "------------------" << endl;
 			break;
-
-			if (Cmd == 2)
-			{
-				return;
-			}
 		}
+		
 }

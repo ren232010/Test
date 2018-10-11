@@ -3,10 +3,11 @@
 
 #include "stdafx.h"
 #include <iostream>
+#include <string>
 #include "Break.h"
 #include "Continue.h"
 #include "Enum.h"
-
+#include "For.h"
 
 int main()
 {
@@ -24,9 +25,39 @@ int main()
 	//Í¼ÐÎ»æ»­-------------------------------------------
 	//DrawBox();
 	//Ã¶¾Ù----------------------------------------------
-	ChangeState();
+	//ChangeState();
+	//ForÁ·Ï°-------------------------------------------
+	//Sum();
+	//NarcissisticNumber();
+	//If Else If Á·Ï°-----------------------------------
+	/*float a = Max(12, 20, 30);
+	cout << a << endl;*/
 
+	//PassWord();
 
+	//PassName();
+	//If Else------------------------------------
+	/*string Password;
+	cout << "ÊäÈëÃÜÂë£º" << endl;
+	getline(cin, Password);
+	if (PassWord(Password))
+	{
+		cout << "µÇÈë³É¹¦" << endl;
+	} 
+	else
+	{
+		cout << "ÃÜÂë´íÎó£¬µÇÈëÊ§°Ü£¡" << endl;
+	}*/
+
+/*
+	int Num;
+	cout << "ÇëÊäÈëÒ»¸öÊý£º" << endl;
+	cin >> Num;
+	Judge(Num);*/
+
+	//visitByAge();
+
+	JudgeNum();
 
 
 
