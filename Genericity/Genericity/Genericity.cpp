@@ -8,7 +8,7 @@
 int main()
 {
 	using namespace std;
-	
+	system("Color FD");
 
 
 

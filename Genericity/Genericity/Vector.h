@@ -1,70 +1,105 @@
 #pragma once
 
-template<typename Change>
+template<typename F>
 class Vector
 {
 private:
-	Change**Data;
+	F*Data;
+	int Size;
+	int Buoy;
 public:
-	void Add(Change Element);//添加数据
-	int Find(Change Elem);//寻找数据
+	bool Add(F Element);//添加数据2
+	int Fin1d(F Elem);//寻找数据
+	bool InspectDilatation();//检查并扩容数组
+/*
 	int IsValid();//判断数组是否为空
-	void ChangeSize();
-	bool RemoveIndex(int Size);//移除指定位置元素
-	bool RemoveEqual(Change Equal);//根据给定内容移除相同元素
+	void ChangeSize();*/
+	bool RemoveIndex(int Index);//移除指定位置元素
+	bool RemoveEqual(F Equal);//根据给定内容移除相同元素
 	bool Clear();//清空数组
+	F&FindByIndex(int Index);//通过给定位置查找元素
+	F& operator[](int Index); 
 public:
 	Vector();
-protected:
-	int Lengt;
-	int Buoy;
+	~Vector();
 };
 
-template<typename Change>
-void Vector<Change>::ChangeSize()
+template<typename F>
+bool Vector<F>::RemoveIndex(int Index)
 {
-	if (IsValid() == 0)
-	{
-		Change *Data1[Lengt += 10] = new Change();
-		for (int i = 0; i < Lengt; i++)
-		{
-			Data1[i] = Data[i];
-			Data1 = nullptr;
-		}
-		Data = new Change(&Data1);
-		delete Data1;
-		Data1 = nullptr;
-	}
+
 }
 
-template<typename Change>
-int Vector<Change>::IsValid()
+template<typename F>
+int Vector<F>::Fin1d(F Elem)
 {
-	for (int i =0;i<Lengt;i++)
+	for (int i=0;i<Size;i++)
 	{
-		if (Data[i])
-		{
-			continue;
-		}
-		else
+		if (Data[i] ==Elem)
 		{
 			return i;
 		}
 	}
-	return 0;
+	return -1;
 }
 
-template<typename Change>
-Vector<Change>::Vector()
+template<typename F>
+bool Vector<F>::Add(F Element)
 {
-	Lengt = 10;
-	Data = new Change*[Lengt];
+	for (int i=0;i<Size;i++)
+	{
+		if (!Data[i])
+		{
+			Data[i] = Element;
+			Buoy++;
+			return true;
+		}
+	}
+	return false;
 }
 
-template<typename Change>
-void Vector<Change>::Add(Change Element)
+template<typename F>
+bool Vector<F>::InspectDilatation()
+{
+	if (Buoy>=Size)
+	{
+		Size += 10;
+		F*NewData = new int[Size];
+		for (int i=0;i<Size;i++)
+		{
+			if (!Data[i])
+			{
+				break;
+			}
+			NewData[i] = Data[i];
+		}
+		Data = NewData;
+		NewData = nullptr;
+		return true;
+	}
+	return false;
+}
+
+template<typename F>
+F& Vector<F>::FindByIndex(int Index)
+{
+	return Data[Index];
+}
+
+template<typename F>
+Vector<F>::Vector()
 {
 
-
 }
+
+template<typename F>
+Vector<F>::~Vector()
+{
+	if (Data!=nullptr)
+	{
+		delete[]Data;
+		Data = nullptr;
+	}
+}
+
 
